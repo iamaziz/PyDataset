@@ -15,7 +15,7 @@ setup(
                  "Python (in dataframe structure)."),
     author='Aziz Alto',
     url='https://github.com/iamaziz/PyDataset',
-    download_url='https://github.com/iamaziz/PyDataset/archive/master.zip',
+    download_url='https://github.com/iamaziz/PyDataset/tarball/0.1.0',
     license = 'MIT',
     author_email='iamaziz.alto@gmail.com',
     version='0.1.0',
