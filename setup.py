@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+# Author: Aziz Alto
+# email: iamaziz.alto@gmail.com
+
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
+
+setup(
+    name='pydataset',
+    description=("Provides instant access to many popular datasets right from "
+                 "Python (in dataframe structure)."),
+    author='Aziz Alto',
+    url='https://github.com/iamaziz/PyDataset',
+    download_url='https://github.com/iamaziz/PyDataset/archive/master.zip',
+    license = '',
+    author_email='iamaziz.alto@gmail.com',
+    version='0.1.0',
+    install_requires=['pandas'],
+    packages=['pydataset', 'pydataset.utils'],
+    package_data={'pydataset': ['*.gz', 'resources.tar.gz']}
+)
