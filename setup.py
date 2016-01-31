@@ -16,7 +16,7 @@ setup(
     author='Aziz Alto',
     url='https://github.com/iamaziz/PyDataset',
     download_url='https://github.com/iamaziz/PyDataset/archive/master.zip',
-    license = '',
+    license = 'MIT',
     author_email='iamaziz.alto@gmail.com',
     version='0.1.0',
     install_requires=['pandas'],
