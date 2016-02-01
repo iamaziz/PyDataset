@@ -1,10 +1,10 @@
 ## PyDataset
 
-Provides instant access to many popular datasets right from Python (in pandas DataFrame structure).
+Provides instant access to many datasets right from Python (in pandas DataFrame structure).
 
 ### What?
 
-The idea is simple. There are so many popular datasets available out there, but they are scattered in different places over the web.
+The idea is simple. There are various datasets available out there, but they are scattered in different places over the web.
 Is there a quick way (in Python) to access them instantly without going through the hassle of searching, downloading, and reading ... etc?
 PyDataset tries to address that question :)
 
