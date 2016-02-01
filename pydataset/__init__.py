@@ -14,9 +14,9 @@ def data(item=None, show_doc=False):
     Examples:
 
     >>> iris = data('iris')
-    loaded: iris <class 'pandas.core.frame.DataFrame'>
 
-    >>> data('Titanic', show_doc=True)
+
+    >>> data('titanic', show_doc=True)
         : returns the dataset's documentation.
 
     >>> data()
