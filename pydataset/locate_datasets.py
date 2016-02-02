@@ -36,16 +36,19 @@ for dirname, dirnames, filenames in os_walk(data_path):
             # e.g. pydataset-package/rdata/csv/boot/acme.csv
             item_path = path_join(dirname, filename)
             # e.g acme.csv
-            item_file = item_path.split('/')[-1]
+            item_file = os_path.split(item_path)[1]
             # e.g. acme
             item = item_file.replace('.csv', '')
             # store item and its path
             items[item] = item_path
 
-            # store item name and path to all html files.
-            # e.g. location: pydataset-package/rdata/doc/boot/acme.html
-            idoc = item_path.replace('/csv/', '/doc/').replace('.csv', '.html')
-            docs[item] = idoc
+    # store item name and path to all html files.
+    for filename in filenames:
+        if filename.endswith('.html'):
+            item_path = path_join(dirname, filename)
+            item_file = os_path.split(item_path)[1]
+            item = item_file.replace('.html', '')
+            docs[item] = item_path
 
 
 def __items_dict():
