@@ -1,4 +1,5 @@
 ## PyDataset
+ version](https://badge.fury.io/py/pydataset.svg)](http://badge.fury.io/py/pydataset)# packages=['pydataset', 'pydataset.support', 'pydataset.support.utils'],
 
 Provides instant access to many datasets right from Python (in pandas DataFrame structure).
 
