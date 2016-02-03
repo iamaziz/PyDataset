@@ -2,6 +2,7 @@
 # main interface to pydataset module
 
 from .datasets_handler import __print_item_docs, __read_csv, __datasets_desc
+from .support import find_similar
 
 
 def data(item=None, show_doc=False):
@@ -33,7 +34,7 @@ def data(item=None, show_doc=False):
             df = __read_csv(item)
             return df
         except KeyError:
-            raise Exception('Wrong dataset name! Try: data() to see available.')
+            find_similar(item)
     else:
         return __datasets_desc()
 

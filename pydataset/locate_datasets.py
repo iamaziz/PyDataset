@@ -31,10 +31,10 @@ docs = {}
 for dirname, dirnames, filenames in os_walk(data_path):
 
     # store item name and path to all csv files.
-    for filename in filenames:
-        if filename.endswith('.csv'):
+    for fname in filenames:
+        if fname.endswith('.csv') and not fname.startswith('.'):
             # e.g. pydataset-package/rdata/csv/boot/acme.csv
-            item_path = path_join(dirname, filename)
+            item_path = path_join(dirname, fname)
             # e.g acme.csv
             item_file = os_path.split(item_path)[1]
             # e.g. acme
@@ -43,9 +43,9 @@ for dirname, dirnames, filenames in os_walk(data_path):
             items[item] = item_path
 
     # store item name and path to all html files.
-    for filename in filenames:
-        if filename.endswith('.html'):
-            item_path = path_join(dirname, filename)
+    for fname in filenames:
+        if fname.endswith('.html') and not fname.startswith('.'):
+            item_path = path_join(dirname, fname)
             item_file = os_path.split(item_path)[1]
             item = item_file.replace('.html', '')
             docs[item] = item_path
