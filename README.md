@@ -30,7 +30,7 @@ data()
 ```
 
 That's it.
-See more [examples](examples.ipynb).
+See more [examples](examples).
 
 
 ### Why?
