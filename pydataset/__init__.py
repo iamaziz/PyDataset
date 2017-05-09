@@ -1,10 +1,16 @@
 # __init__.py
 # main interface to pydataset module
 
+from tempfile import mkdtemp
+from joblib import Memory
+
 from .datasets_handler import __print_item_docs, __read_csv, __datasets_desc
 from .support import find_similar
 
+cachedir = mkdtemp()
+memory = Memory(cachedir=cachedir, verbose=0)
 
+@memory.cache
 def data(item=None, show_doc=False):
     """loads a datasaet (from in-modules datasets) in a dataframe data structure.
 
