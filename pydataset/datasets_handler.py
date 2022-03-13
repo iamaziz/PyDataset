@@ -55,10 +55,14 @@ def __get_doc_path(item):
     return docs[item]
 
 
-def __print_item_docs(item):
+def __get_item_docs(item):
     path = __get_doc_path(item)
     doc = __read_docs(path)  # html format
-    txt = __filter_doc(doc)  # edit R related txt
+    return  __filter_doc(doc)  # edit R related txt
+
+
+def __print_item_docs(item):
+    txt = __get_item_docs(item)
     print(txt)
 
 
