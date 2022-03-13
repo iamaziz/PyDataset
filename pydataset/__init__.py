@@ -1,7 +1,7 @@
 # __init__.py
 # main interface to pydataset module
 
-from .datasets_handler import __print_item_docs, __read_csv, __datasets_desc
+from .datasets_handler import __print_item_docs, __read_csv, __datasets_desc, __get_item_docs
 from .support import find_similar
 
 
@@ -28,8 +28,8 @@ def data(item=None, show_doc=False):
     if item:
         try:
             if show_doc:
-                __print_item_docs(item)
-                return
+                # __print_item_docs(item)
+                return __get_item_docs(item)
 
             df = __read_csv(item)
             return df
