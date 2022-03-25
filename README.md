@@ -20,9 +20,9 @@ from pydataset import data
 ```python
 titanic = data('titanic')
 ```
-- To display the documentation of a dataset:
+- To get the documentation of a dataset instead:
 ```python
-data('titanic', show_doc=True)
+data('titanic', get_doc=True)
 ```
 - To see the available datasets:
 ```python
@@ -58,6 +58,13 @@ For example,
 - `$ rm -rf $HOME/.pydataset`
 
 ### Changelog
+
+**Forked version**
+
+- changed show_doc parameter to get_doc
+- get_doc now returns the documentation as a string
+- added new datasets
+- removed unnecessary csv files from resources
 
 **0.2.0**
 
